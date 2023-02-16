@@ -40,8 +40,13 @@ navigation_links:
     url: /search
 
 # Footer icons
+footer_links:
+  - title: Feed
+    url: feed.xml
+    icon: fa fa-rss-square
+
   - title: GitHub
-    url: https://github.com/GebusAndrzej
+    url: https://github.com/forever-jekyll
     icon: fa fa-github-square
 
 # Enter your copyright text if you wish to override the default one.
