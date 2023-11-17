@@ -16,7 +16,7 @@ TypeScript things
 
 preOrderTraversal using generator
 
-{% highlight %}
+{% highlight js %}
 function* preOrderTraversal(node: Node): IterableIterator<Node> {
     yield node;
     if (node.children.length) {
