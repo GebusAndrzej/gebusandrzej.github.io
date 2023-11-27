@@ -35,3 +35,21 @@ export function find(tree: Node, key: string): Node | undefined {
 }
 
 {% endhighlight %}
+
+---
+
+# Type Transformations
+
+### Camel Case Object Keys
+> NOTE: if u need this, something went wrong
+
+{% highlight ts %}
+
+type CamelCase<S extends string> = S extends `${infer P1}_${infer P2}${infer P3}`
+    ? `${Lowercase<P1>}${Uppercase<P2>}${CamelCase<P3>}`
+    : Lowercase<S>;
+
+type SomeTypeCamelCased =
+    { [key in keyof SomeType as CamelCase<key>]: SomeType[key] };
+
+{% endhighlight %}
